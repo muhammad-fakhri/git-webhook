@@ -9,20 +9,15 @@ const url = require('url');
 http.createServer(function (req, res) {
     req.on('data', function (chunk) {
         let sig = "sha1=" + crypto.createHmac('sha1', secret).update(chunk.toString()).digest('hex');
-        
+
         if (req.headers['x-hub-signature'] == sig) {
+            const url_parts = url.parse(req.url, true);
+            const query = url_parts.query;
+            const origin = `https://${query.username}:${query.token}@github.com/${query.username}/${query.repo}.git ${query.branch}`;
             console.log("Git webhook triggered");
-            exec('cd ' + repo + ' && git pull');
+            exec('cd ' + repo + ' && git pull ' + origin);
         }
     });
 
     res.end();
 }).listen(8080);
-
-var url = require('url'); 
-var url_parts = url.parse(request.url, true);
-var query = url_parts.query;
-	const origin = 
-`https://${payload.username}:${payload.password}@github.com/${payload.name}/${payload.repo}.git 
-${payload.branch}`;
-	
