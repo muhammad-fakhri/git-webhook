@@ -1,0 +1,26 @@
+{
+	"name": "git-webhook",
+	"version": "1.0.0",
+	"description": "Simple webhook to git pull your repository in remote server.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/muhammad-fakhri/git-webhook.git"
+	},
+	"keywords": [
+		"webhook"
+	],
+	"author": "Muhammad Fakhri <muhammadfakhri301@gmail.com> (https://muhammadfakhri.my.id)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/muhammad-fakhri/git-webhook/issues"
+	},
+	"homepage": "https://github.com/muhammad-fakhri/git-webhook#readme",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"express": "^4.17.1"
+	}
+}
