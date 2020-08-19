@@ -15,7 +15,7 @@ This webhook work in public/private repository. For webhook that does not use ex
         * username  : your github username
 	    * password  : your github password
 	    * name      : repository owner's name
-        * repo      : repository name
+        * repository: repository name
         * branch    : your production branch
         * workdir   : path to project folder in your server
         * secret    : your secret
