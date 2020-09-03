@@ -1,5 +1,5 @@
+// Place your secret here
 const secret = "you secret";
-const repo = "path to your project dir"; // example: "~/projectA/"
 
 const http = require('http');
 const crypto = require('crypto');
@@ -15,7 +15,7 @@ http.createServer(function (req, res) {
             const query = url_parts.query;
             const origin = `https://${query.username}:${query.token}@github.com/${query.username}/${query.repo}.git ${query.branch}`;
             console.log("Git webhook triggered");
-            exec('cd ' + repo + ' && git pull ' + origin);
+            exec('cd ' + query.workdir + ' && git pull ' + origin);
         }
     });
 
