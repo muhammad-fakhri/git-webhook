@@ -24,7 +24,8 @@ This webhook work in private repository. For public repository webhook, check 'm
         * token     : your Personal Access Token
         * repo      : your repository name
         * branch    : your desired branch
-        * workdir   : path to your repository folder at remote server. For example : "~/home/my-project"
+        * workdir   : path to your repository folder at remote server. For example : `~/home/my-project`
+        * command   : optional command. For example : `npm run build`
     * Fill "Secret" with secret that you created before
     * Check "Active"
     * Click "Add webhook"
