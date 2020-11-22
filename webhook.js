@@ -20,7 +20,7 @@ http
         const query = url_parts.query;
         const origin = `https://${query.username}:${query.token}@github.com/${query.username}/${query.repo}.git ${query.branch}`;
         exec(`cd ${query.workdir} && git pull ${origin}`);
-        if (query.command) exec(command);
+        if (query.command) exec(query.command);
         console.log("Git webhook triggered");
       }
     });
