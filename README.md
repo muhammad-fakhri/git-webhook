@@ -9,7 +9,8 @@ This webhook work in public/private repository. For webhook that does not use ex
 1. Set up your secret at index.js
 
 2. Create request with these specification:
-    * Request URL: http://{your server IP}:6789/webhook
+    * Request URL:  
+    `http://{your server IP}:6789/webhook`
     * Request Method: POST
     * Payload :
         * username  : your github username
@@ -18,6 +19,8 @@ This webhook work in public/private repository. For webhook that does not use ex
         * repository: repository name
         * branch    : your production branch
         * workdir   : path to project folder in your server
+        * command   : optional command, example:  
+        `npm run build`
         * secret    : your secret
 
 3. To test your Git Webhook, make GET request to http://{your server IP}:6789
