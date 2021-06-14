@@ -25,4 +25,4 @@ This webhook work in public repository. For private repository webhook, check 'p
     * Done
 
 ## Developer
-Made with passion by [Nyxordinal](https://nyxordinal.tech).
+Made with passion by [Muhammad Fakhri](https://muhammadfakhri.my.id).
